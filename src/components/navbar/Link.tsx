@@ -1,5 +1,4 @@
 import { motion, useAnimation } from "framer-motion";
-import { useNavigate } from "react-router";
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
 
@@ -8,7 +7,6 @@ const animate = { y: "-50%" };
 
 function Link({ name, link }: { name: string; link: string }) {
   const controls = useAnimation();
-  const navigate = useNavigate();
   const [state,set]=useState(false);
   
   return (

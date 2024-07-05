@@ -1,9 +1,9 @@
-import { motion, spring, useInView } from "framer-motion";
+import { motion} from "framer-motion";
 import { ImgaeScroll } from "./services/services";
 import { GoArrowUpRight } from "react-icons/go";
 import Loading from "../framer-motion/loading";
 import { useAnimation } from "framer-motion";
-import { createContext, useContext, useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import Footer from "./footer";
 
 const data = [

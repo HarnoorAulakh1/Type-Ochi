@@ -5,7 +5,7 @@ import { useRef } from "react";
 import { useScroll } from "framer-motion";
 import { useTransform } from "framer-motion";
 
-export function Links({ name, handle }: { name: string; handle: () => void }) {
+export function Links({ name, handle }: { name: string; handle?: () => void }) {
   const control = useAnimation();
   const animate = { x: ["0%", "100%", "-100%", "0"] };
   return (

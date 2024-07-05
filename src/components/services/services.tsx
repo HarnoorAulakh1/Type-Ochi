@@ -106,33 +106,55 @@ const reviews = [
 
 const HoverContext = createContext<{
   click: {
-    img: string;
-    animate: { x: [string, string] };
-    times: [number, number];
-  };
-  set: (arg?: {
     i: number;
     img1: string;
     img2: string;
-    animate1: { x: [string, string] };
-    animate2: { x: [string, string] };
-    times: [number, number];
-  }) => void;
-}>(null);
+    animate1: { x: string[] };
+    animate2: { x: string[] };
+    times: number[];
+  };
+  set: React.Dispatch<
+    React.SetStateAction<{
+      i: number;
+      img1: string;
+      img2: string;
+      animate1: { x: string[] };
+      animate2: { x: string[] };
+      times: number[];
+    }>
+  >;
+}>({
+  click: {
+    i: 0,
+    img1: "",
+    img2: "",
+    animate1: { x: ["0", "0"] },
+    animate2: { x: ["0", "0"] },
+    times: [0, 0.5],
+  },
+  set: () => {},
+});
 
 function Services() {
   const [click, set] = useState<{
     i: number;
     img1: string;
     img2: string;
-    animate1: { x: [string, string] };
-    animate2: { x: [string, string] };
-    times: [number, number];
-  }>({ i: 0, img: "", animate: { x: ["0", "0"] }, times: [0, 0.5] });
+    animate1: { x: string[] };
+    animate2: { x: string[] };
+    times: number[];
+  }>({
+    i: 0,
+    img1: "",
+    img2: "",
+    animate1: { x: ["0", "0"] },
+    animate2: { x: ["0", "0"] },
+    times: [0, 0.5],
+  });
   console.log(click);
   return (
     <HoverContext.Provider value={{ click, set }}>
-      {/* <Loading text="services" /> */}
+      <Loading text="services" />
       <div className={`h-max w-full bg-back overflow-hidden`}>
         <div className="bg-back pt-[7rem] md:pt-[10rem] pb-[5rem] overflow-hidden">
           <h1 className="font-['Founders_Grotesk_Condensed'] text-[4rem] pl-8 uppercase font-bold text-text md:text-[7rem]">
@@ -264,7 +286,6 @@ function Services() {
           {reviews.map((item) => (
             <Open
               name1={item.i}
-              num={item.num}
               name={item.name}
               img={item.img}
               para={item.para}
@@ -298,8 +319,8 @@ export function Button({
             i: i,
             img1: i == 0 || i == 2 ? img : x.img1,
             img2: i == 1 || i == 3 ? img : x.img2,
-            animate1: (i == 0 || i == 2) && { x: ["0", "100%", "-100%"] },
-            animate2: (i == 1 || i == 3) && { x: ["0", "100%", "-100%"] },
+            animate1: (i == 0 || i == 2) ? { x: ["0", "100%", "-100%"] }: x.animate1,
+            animate2: (i == 1 || i == 3) ? { x: ["0", "100%", "-100%"] }: x.animate2,
             times: [0, 0.5, 0.5],
           };
         })

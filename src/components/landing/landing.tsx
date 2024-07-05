@@ -4,7 +4,7 @@ import Button from "./button";
 import { MotionValue } from "framer-motion";
 
 interface LandingProps {
-  y: MotionValue<string | number>;
+  y: MotionValue<string>;
 }
 
 function Landing({ y }: LandingProps) {

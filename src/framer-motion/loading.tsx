@@ -3,7 +3,7 @@ import { useEffect } from "react";
 
 function Loading({ text }: { text: string }) {
   useEffect(() => {
-    const promise = new Promise<void>((resolve, reject) => {
+    const promise = new Promise<void>((resolve) => {
       document.body.style.overflow = "hidden";
       setTimeout(() => {
         resolve();

@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 
 function Card1({ text, img }: { text: string; img: string }) {
   return (
