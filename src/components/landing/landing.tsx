@@ -32,11 +32,11 @@ function Landing({ y }: LandingProps) {
       className="bg-back w-full h-[50rem] relative rounded-[2rem] z-[50] "
       style={{ y: y }}
     >
-      <motion.div className="w-max flex flex-col md:gap-0 gap-2  text-[14vw] md:text-[9vw] leading-[6.5vw] font-['Founders_Grotesk_Condensed'] font-bold text-text absolute top-[15%] md:top-[25%] ml-5 md:ml-8">
+      <motion.div className="w-max flex flex-col md:gap-0 gap-2  text-[14vw] md:text-[9vw] leading-[6.5vw] font-fond font-bold text-text absolute top-[15%] md:top-[25%] ml-5 md:ml-8">
         <h1>WE CREATE</h1>
-        <div className="flex flex-row items-center mt-2">
+        <div className="flex flex-row items-center">
           <motion.div
-            className="rounded-xl w-0 overflow-hidden mb-2"
+            className="rounded-xl w-0 overflow-hidden relative top-[-.8rem] md:top-[-1.5rem]"
             transition={{ duration: 0.8, type: "spring" }}
             animate={control3}
           >

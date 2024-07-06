@@ -13,10 +13,10 @@ export default {
         'text': '#212121',
         'primary': '#004D43',
       },
-      // fontFamily: {
-      //   'fond': ['FoundersGrotesk', 'Roboto','sans-serif'],
-      //   'logo': ['NeueMontreal', 'Roboto','sans-serif'],
-      // },
+      fontFamily: {
+        'fond':['Founders Grotesk','Roboto','sans-serif'],
+        'logo': ['NeueMontreal', 'Roboto','sans-serif'],
+      },
     },
   },
   plugins: [],

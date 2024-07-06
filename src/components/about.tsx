@@ -33,26 +33,26 @@ function About() {
   const control = useAnimation();
   useEffect(() => {
       setTimeout(() => {
-        control.start({ width: "10rem" });
+        control.start({ width: "10%" });
       }, 1500);
   }, [control]);
   return (
     <div className="bg-back w-full pt-1 pb-5 ">
       <Loading text="about us" />
-      <div className="font-['Founders_Grotesk_Condensed'] w-full pl-8 leading-none md:leading-[6.5rem] text-[4rem] md:text-[8rem] text-text uppercase font-bold">
+      <div className="font-fond w-full pl-8 leading-none md:leading-[6.5rem] text-[4rem] md:text-[8rem] text-text uppercase font-bold">
         <div className=" w-full h-full md:mt-[13%] mt-[25%]">
           <div >We are</div>
           <div className="flex flex-row items-center ">
             <motion.div
-              className="rounded-xl w-0 overflow-hidden"
+              className="rounded-xl w-0 overflow-hidden relative top-[-0.8rem] md:top-[-1.5rem]"
               transition={{ duration: 0.8, type: "spring" }}
               animate={control}
             >
-              <div className="rounded-xl w-[5rem] md:w-[10rem] h-[6rem]">
+              <div className="rounded-xl w-[5rem] md:w-[10rem] md:h-[6rem]">
                 <img
                   src="./slide.jpeg"
                   alt=""
-                  className="rounded-xl w-[10rem] h-[6rem]"
+                  className="rounded-xl"
                 />
               </div>
             </motion.div>

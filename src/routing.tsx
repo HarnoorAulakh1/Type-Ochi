@@ -22,7 +22,7 @@ export const router = createBrowserRouter([
           {
             path: "all",
             element: (
-              <div className="flex flex-row gap-2">
+              <div className="flex flex-col md:flex-row gap-0 md:gap-2">
                 <div className="flex flex-row gap-5">
                   <Card2
                     img="/all.png"

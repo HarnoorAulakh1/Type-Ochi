@@ -15,14 +15,14 @@ const data = [
 
 function Insights() {
   return (
-    <div className="bg-back h-max w-[full] relative pt-[1px] ">
-      <div className="uppercase font-['Founders_Grotesk_Condensed'] pl-8 text-text text-[7rem] font-bold mt-[10%]">
+    <div className="bg-back h-max w-[full] relative pt-[1px]">
+      <div className="uppercase font-fond pl-8 text-text text-[4rem] md:text-[7rem] font-bold mt-[10%]">
         Insights
       </div>
       <hr className="border-t-[.5px] h-[1px] bg-text mt-[5rem]" />
-      <div className="w-full pl-8 flex  flex-row justify-between mt-5">
+      <div className="w-full pl-8 flex flex-col md:flex-row justify-between mt-5">
         <p className="font-light">Latest insights:</p>
-        <div className="flex flex-row gap-3 mr-[10rem]">
+        <div className="flex flex-row gap-3 mr-[10rem] overflow-auto w-max">
           <Button name="All" to="all" />
           <Button name="Presentation Template" to="presentation" />
           <Button name="public Speaking" to="public" />
@@ -30,16 +30,16 @@ function Insights() {
         </div>
       </div>
       <Outlet />
-      <div className="bg-primary w-full pb-[10rem] mt-[5rem] sticky top-[-8rem]">
+      <div className="bg-primary w-full pb-[10rem] mt-[5rem] sticky md:top-[-8rem]">
         <div className="overflow-hidden w-full">
           <Crousal text="instagram  " />
         </div>
 
-        <div className="flex flex-row ml-8 justify-between mr-5 mt-10">
+        <div className="flex flex-col gap-10 md:gap-0 md:flex-row ml-8 justify-between mr-5 mt-10">
           <p className="font-['Neue_Montreal'] text-back text-[1rem] ">
             Last publications:
           </p>
-          <div className="flex flex-row gap-3">
+          <div className="flex flex-col md:flex-row gap-3">
             {data.map((item) => (
               <Card1 img={item.img} text={item.text} />
             ))}
@@ -57,14 +57,15 @@ export function Crousal({ text }: { text: string }) {
       initial={{ x: "0" }}
       animate={{ x: "-117%" }}
       transition={{ duration: 5, repeat: Infinity, ease: "linear" }}
-      className=" w-full bg-primary rounded-2xl"
+      className=" w-full bg-primary rounded-2xl pt-10"
     >
-      <hr className="w-[250%]" />
-      <h1 className="uppercase text-nowrap  w-full leading-[100%] text-[25vw] font-['Founders_Grotesk_Condensed']  font-bold text-back">
+      <hr className="w-[250%]" /><br />
+      <h1 className="uppercase text-nowrap  w-full leading-[100%] text-[25vw] font-fond  font-bold text-back">
         {text}
         {text}
         {text}
       </h1>
+      <hr className="w-[250%]" />
     </motion.div>
   );
 }

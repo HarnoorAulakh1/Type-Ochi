@@ -157,7 +157,7 @@ function Services() {
       <Loading text="services" />
       <div className={`h-max w-full bg-back overflow-hidden`}>
         <div className="bg-back pt-[7rem] md:pt-[10rem] pb-[5rem] overflow-hidden">
-          <h1 className="font-['Founders_Grotesk_Condensed'] text-[4rem] pl-8 uppercase font-bold text-text md:text-[7rem]">
+          <h1 className="font-fond text-[4rem] pl-8 uppercase font-bold text-text md:text-[7rem]">
             services
           </h1>
           <hr className="h-[1.5px] bg-text md:m-0 mt-10" />

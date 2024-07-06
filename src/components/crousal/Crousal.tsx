@@ -14,7 +14,7 @@ function Line({text}:{text:string}) {
       className=" w-full bg-primary rounded-2xl "
     >
       <hr className="w-[250%]" />
-      <h1 className="uppercase text-nowrap  w-full leading-[100%] text-[25vw] font-['Founders_Grotesk_Condensed']  font-bold text-back">
+      <h1 className="uppercase text-nowrap  w-full leading-[100%] text-[25vw] font-fond  font-bold text-back">
         {text}{text}{text}
       </h1>
     </motion.div>
