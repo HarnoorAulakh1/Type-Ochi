@@ -35,20 +35,20 @@ function About() {
       setTimeout(() => {
         control.start({ width: "10rem" });
       }, 1500);
-  }, []);
+  }, [control]);
   return (
     <div className="bg-back w-full pt-1 pb-5 ">
       <Loading text="about us" />
-      <div className="font-['Founders_Grotesk_Condensed'] w-full pl-8 leading-[6.5rem] text-[8rem] text-text uppercase font-bold">
-        <div className=" w-full h-full">
-          <div className="mt-[13%]">We are</div>
+      <div className="font-['Founders_Grotesk_Condensed'] w-full pl-8 leading-none md:leading-[6.5rem] text-[4rem] md:text-[8rem] text-text uppercase font-bold">
+        <div className=" w-full h-full md:mt-[13%] mt-[25%]">
+          <div >We are</div>
           <div className="flex flex-row items-center ">
             <motion.div
               className="rounded-xl w-0 overflow-hidden"
               transition={{ duration: 0.8, type: "spring" }}
               animate={control}
             >
-              <div className="rounded-xl w-[10rem] h-[6rem]">
+              <div className="rounded-xl w-[5rem] md:w-[10rem] h-[6rem]">
                 <img
                   src="./slide.jpeg"
                   alt=""
@@ -60,10 +60,10 @@ function About() {
           </div>
         </div>
       </div>
-      <hr className="h-[1.5px] bg-text mt-[10rem]" />
-      <div className="pl-8 flex flex-row gap-[25rem] justify-between pr-5 text-text mt-5 font-light items-start">
+      <hr className="h-[1.5px] bg-text mt-[5rem] md:mt-[10rem]" />
+      <div className="pl-8 flex flex-col md:flex-row gap-5 md:gap-[25rem] justify-between pr-5 text-text mt-5 font-light items-start">
         <p>About us:</p>
-        <div className="flex flex-col w-[15rem]">
+        <div className="flex flex-col w-[18rem] md:w-[15rem]">
           <p>
             In Ukrainian, ochi - means eyes. It's not just a beautiful word, but
             our philosophy. Almost everything that needs to be communicated is
@@ -88,11 +88,11 @@ function About() {
           </div>
         </div>
       </div>
-      <p className="pl-8 text-[3rem] text-text w-[60%] font-['Neue_Montreal'] mt-[5rem]">
+      <p className="pl-8 text-[2rem] md:text-[3rem] text-text w-[95%] md:w-[60%] font-['Neue_Montreal'] mt-[5rem]">
         We save businesses from ugly and ineffective presentations.
       </p>
-      <hr className="h-[1.5px] bg-text mt-[5rem]" />
-      <div className="flex flex-row pl-8 pr-5 gap-[24rem]">
+      <hr className="h-[1.5px] bg-text mt-[2rem] md:mt-[5rem]" />
+      <div className="flex flex-col md:flex-row pl-8 pr-5 gap-[2rem] md:gap-[24rem]">
         <p>We are ochi design:</p>
         <div className="flex flex-col gap-5 w-[18rem]">
           <p>
@@ -106,7 +106,7 @@ function About() {
           </p>
         </div>
       </div>
-      <div className="h-[50rem] overflow-hidden rounded-[2rem] my-[5rem]">
+      <div className="h-max md:h-[50rem] overflow-hidden rounded-[2rem] my-[5rem]">
         <ImgaeScroll img="./about.jpeg" />
       </div>
       <Crousal1 text="core of the team " data={data} />
@@ -136,7 +136,7 @@ export function Card({data: data}: {data: { img: string; name: string; role: str
         initial={{ scale: "95%", x: "5%" }}
         animate={{ scale: "100%", x: 0 }}
         transition={{ duration: 0.5 }}
-        className="bg-back w-[80%] h-[33rem] rounded-[1rem] mt-[1rem] pl-8 pt-5 relative z-50 flex flex-row"
+        className="bg-back w-[95%] md:w-[80%] h-[20rem] md:h-[33rem] rounded-[1rem] mt-[1rem] pl-5 pt-5 relative z-50 flex flex-row"
       >
         <div className="text-text">
           <svg
@@ -169,21 +169,21 @@ export function Card({data: data}: {data: { img: string; name: string; role: str
           </svg>
         </div>
         <div className="flex flex-col gap-2 absolute right-5 text-text font-light">
-          <div className="w-[19rem] h-[20rem] rounded-xl overflow-hidden">
-            <img src={img} alt="" className="w-[19rem] h-[20rem]" />
+          <div className="md:w-[19rem] w-[10rem] md:h-[20rem] rounded-xl overflow-hidden">
+            <img src={img} alt="" />
           </div>
           <p>{role}</p>
         </div>
         <div className="flex flex-col absolute left-8 bottom-5">
           {value.map((item) => (
-            <div className="text-text uppercase leading-none font-bold text-[4rem] font-['Founders_Grotesk_Condensed']">
+            <div className="text-text uppercase leading-none font-bold text-[2rem] md:text-[4rem] font-['Founders_Grotesk_Condensed']">
               {item}
             </div>
           ))}
         </div>
       </motion.div>
-      <motion.div key={index.curr} transition={{duration:.5}} initial={{height:"26rem"}} animate={{height:"30rem"}} className="bg-[#5c8c85] absolute z-[10]  w-[76%] mt-[1rem] ml-[5rem] h-[30rem] rounded-[1rem]"></motion.div>
-      <motion.div key={index.curr} transition={{duration:.4}} initial={{height:"24rem",x:"1rem",y:".5rem"}} animate={{height:"26rem",y:"0rem",x:"0rem"}} className="bg-[#1d6258] absolute z-[8]  w-[76%] mt-[1rem] ml-[7rem] h-[26rem] rounded-[1rem]"></motion.div>
+      <motion.div key={index.curr} transition={{duration:.5}} initial={{height:"26rem"}} animate={{height:"30rem"}} className="bg-[#5c8c85] hidden absolute z-[10] md:block w-[76%] mt-[1rem] ml-[5rem] h-[30rem] rounded-[1rem]"></motion.div>
+      <motion.div key={index.curr} transition={{duration:.4}} initial={{height:"24rem",x:"1rem",y:".5rem"}} animate={{height:"26rem",y:"0rem",x:"0rem"}} className="bg-[#1d6258] hidden md:block absolute z-[8]  w-[76%] mt-[1rem] ml-[7rem] h-[26rem] rounded-[1rem]"></motion.div>
       <motion.div
         initial={{ y: 0, x: 0 }}
         animate={{ y: "200%" }}
