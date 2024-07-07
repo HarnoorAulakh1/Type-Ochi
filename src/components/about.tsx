@@ -176,7 +176,7 @@ export function Card({data: data}: {data: { img: string; name: string; role: str
         </div>
         <div className="flex flex-col absolute left-8 bottom-5">
           {value.map((item) => (
-            <div className="text-text uppercase leading-none font-bold text-[2rem] md:text-[4rem] font-['Founders_Grotesk_Condensed']">
+            <div className="text-text uppercase leading-none font-bold text-[2rem] md:text-[4rem] font-fond">
               {item}
             </div>
           ))}
@@ -254,7 +254,7 @@ function Crousal1({
         className=" w-full bg-primary rounded-2xl "
       >
         <hr className="w-[250%]" />
-        <h1 className="uppercase text-nowrap  bg-primary w-full leading-[100%] text-[20vw] font-['Founders_Grotesk_Condensed']  font-bold text-back">
+        <h1 className="uppercase text-nowrap  bg-primary w-full leading-[100%] text-[20vw] font-fond  font-bold text-back">
           {text}
           {text}
           {text}
