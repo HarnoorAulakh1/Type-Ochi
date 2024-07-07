@@ -53,7 +53,7 @@ function Landing({ y }: LandingProps) {
         <h1>PRESENTATIONS</h1>
       </motion.div>
       {loading && (
-        <p className="text-[5rem] font-fond uppercase font-bold text-text absolute bottom-4 left-10">
+        <p className="text-[2rem] md:text-[5rem] font-fond uppercase font-bold text-text absolute bottom-4 left-10">
           Loading....
         </p>
       )}

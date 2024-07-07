@@ -6,12 +6,12 @@
   @font-face {
     font-family: "Neue Montreal";
     font-weight: 400;
-    src: url(public/NeueMontreal-Regular.otf) format("woff");
+    src: url(src/fonts/FoundersGroteskXCond-Bold.otf 22-36-25-521.otf) format("woff");
   }
   @font-face {
     font-family: "Founders Grotesk";
     font-weight: 500;
-    src: url(public/FoundersGroteskXCond-Bold.otf) format("woff");
+    src: url(src/fonts/FoundersGroteskXCond-Bold.otf 22-36-25-521.otf) format("woff");
   }
 }
 
