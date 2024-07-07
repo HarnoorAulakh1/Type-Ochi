@@ -5,7 +5,7 @@ function Card1({ text, img }: { text: string; img: string }) {
       <div className="h-[20rem] w-[20rem] overflow-hidden rounded-[1rem]">
         {" "}
         <img
-          className="h-[20rem] w-[20rem] hover:scale-[110%] transition duration-[5] ease-linear rounded-[1rem]"
+          className="h-[20rem] w-[20rem] hover:scale-[110%] transition duration-150 ease-linear rounded-[1rem]"
           src={img}
           alt=""
         />

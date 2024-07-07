@@ -3,6 +3,7 @@ import { motion, useAnimation } from "framer-motion";
 import { useEffect, useState } from "react";
 import Card1 from "./work/card1.tsx";
 import Footer from "./footer.tsx";
+import Loading from "../framer-motion/loading.tsx";
 
 const data = [
   { img: "/in1.png", text: "Sales calls?Oh no" },
@@ -15,14 +16,15 @@ const data = [
 
 function Insights() {
   return (
-    <div className="bg-back h-max w-[full] relative pt-[1px]">
-      <div className="uppercase font-fond pl-8 text-text text-[4rem] md:text-[7rem] font-bold mt-[10%]">
+    <div className="bg-back h-max w-full relative pt-[1px]">
+        <Loading text="insights"/>
+      <div className="uppercase font-fond pl-8 text-text text-[4rem] md:text-[7rem] font-bold mt-[20%]">
         Insights
       </div>
       <hr className="border-t-[.5px] h-[1px] bg-text mt-[5rem]" />
       <div className="w-full pl-8 flex flex-col md:flex-row justify-between mt-5">
         <p className="font-light">Latest insights:</p>
-        <div className="flex flex-row gap-3 mr-[10rem] overflow-auto w-max">
+        <div className="flex flex-row gap-3 mr-[10rem] w-full overflow-auto mt-4">
           <Button name="All" to="all" />
           <Button name="Presentation Template" to="presentation" />
           <Button name="public Speaking" to="public" />

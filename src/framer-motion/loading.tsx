@@ -15,7 +15,7 @@ function Loading({ text }: { text: string }) {
   }, []);
   return (
     <motion.div
-      className="fixed top-0 z-[99999] bg-text h-[50rem] w-full overflow-hidden"
+      className="fixed top-0 z-[99999] bg-text h-full w-full overflow-hidden font-fond"
       // animate={{
       //   height: ["0", "100%", "100%", "0"],
       //   bottom: ["0", "0", "0", "100%"],
@@ -35,7 +35,7 @@ function Loading({ text }: { text: string }) {
         }}
       >
         <motion.p
-          className="text-[4rem] font-['Neue_Montreal'] uppercase"
+          className="text-[6rem] uppercase"
           initial={{ y: "0%" }}
           animate={{ y: ["0", "0", ".6"] }}
           transition={{ duration: 1, stiffness: 120, times: [0.1, 0.3] }}

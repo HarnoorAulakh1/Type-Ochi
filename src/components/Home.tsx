@@ -26,7 +26,7 @@ function Work() {
   }, []);
 
   return (
-    <div className="w-full h-max bg-back overflow-hidden">
+    <div className="w-full rounded-[2rem] h-max bg-back overflow-hidden">
       <Landing y={y2} />
       {!loading && (
         <>
