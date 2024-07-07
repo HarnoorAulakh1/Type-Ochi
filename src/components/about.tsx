@@ -33,7 +33,7 @@ function About() {
   const control = useAnimation();
   useEffect(() => {
       setTimeout(() => {
-        control.start({ width: "10%" });
+        control.start({ width: "15%" });
       }, 1500);
   }, [control]);
   return (
@@ -42,7 +42,7 @@ function About() {
       <div className="font-fond w-full pl-8 leading-none md:leading-[6.5rem] text-[4rem] md:text-[8rem] text-text uppercase font-bold">
         <div className=" w-full h-full md:mt-[13%] mt-[25%]">
           <div >We are</div>
-          <div className="flex flex-row items-center ">
+          <div className="flex flex-row items-center gap-1 md:gap-0 ">
             <motion.div
               className="rounded-xl w-0 overflow-hidden relative top-[-0.8rem] md:top-[-1.5rem]"
               transition={{ duration: 0.8, type: "spring" }}

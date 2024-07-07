@@ -1,4 +1,4 @@
-import { Outlet } from "react-router";
+import { Outlet, useNavigate } from "react-router";
 import Navbar from "./navbar/Navbar";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
@@ -19,7 +19,12 @@ function Applayout() {
   const animate = { y: [0, 0], scale: [0.7, 1], borderRadius: ["2rem", "0"] };
   const controls = useAnimation();
   const [open, setx] = useState<boolean>(false);
+  const navigate = useNavigate();
   console.log(open);
+  function handle(){
+    setx(false);
+    navigate("/");
+  }
   useEffect(() => {
     controls.start({ y: 0 });
     setTimeout(() => {
@@ -41,6 +46,7 @@ function Applayout() {
       >
         <div className="flex flex-row justify-between items-center mt-5 ml-5 mr-5">
           <svg
+            onClick={handle}
             className="text-back"
             width="72"
             height="30"
@@ -75,7 +81,6 @@ function Applayout() {
           />
         </div>
         <hr className="h-[1px] bg-back mt-[6rem]" />
-
 
         <div className="overflow-y-auto h-[80%]">
           <div className="flex flex-col gap-1 w-max sticky left-5 mt-[2rem]">

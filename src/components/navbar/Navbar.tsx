@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { HiOutlineMenuAlt4 } from "react-icons/hi";
+import { useNavigate } from "react-router-dom";
 import Link from "./Link";
 import {
   motion,
@@ -19,6 +20,7 @@ function Navbar({
   const [state, set] = useState(true);
   const [state1, set1] = useState(true);
   const { scrollY } = useScroll();
+  const  navigate  = useNavigate();
   useMotionValueEvent(scrollY, "change", (latest) => {
     const y = scrollY.getPrevious();
     if (y !== undefined && latest > y && latest > 100) {
@@ -43,6 +45,7 @@ function Navbar({
       }  flex flex-row w-full md:w-full justify-between items-center overflow-hidden px-10 py-8`}
     >
       <svg
+      onClick={()=>navigate("/")}
         width="72"
         height="30"
         viewBox="0 0 72 30"
