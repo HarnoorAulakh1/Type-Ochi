@@ -15,6 +15,7 @@ export default {
       },
       fontFamily: {
         'fond':['Founders Grotesk','Roboto','sans-serif'],
+        'fond1':['Neue Montreal','Roboto','sans-serif'],
         'logo': ['NeueMontreal', 'Roboto','sans-serif'],
       },
     },

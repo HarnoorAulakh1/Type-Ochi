@@ -64,7 +64,7 @@ function Work() {
       <Loading text="work" />
       <div className="bg-[#CDEA68] h-[10rem] md:h-[30rem] w-full sticky top-0 z-30">
         <div className="relative h-full">
-          <h1 className="uppercase font-['Founders_Grotesk_Condensed'] text-text absolute top-[40%] md:top-[30%] pl-5 left-[2%] text-[4rem] md:text-[6rem] font-bold">
+          <h1 className="uppercase font-fond text-text absolute top-[60%] md:top-[30%] pl-5 left-[2%] text-[4rem] md:text-[6rem] font-bold">
             work
           </h1>
         </div>
@@ -83,29 +83,29 @@ function Work() {
             <Card data={item} />
           ))}
         </div>
-          <div className="h-max overflow-hidden  bg-primary z-30 sticky md:top-[-15rem] pb-[5rem]">
-            <hr className="h-[.2px] bg-white mb-[5rem] mt-[5rem]" />
-            <motion.div
-              initial={{ x: "0" }}
-              animate={{ x: "-77%" }}
-              transition={{ duration: 5, repeat: Infinity, ease: "linear" }}
-              className=" w-full bg-primary rounded-2xl"
-            >
-              <h1 className="uppercase text-nowrap bg-primary  w-full leading-[100%] text-[20vw] font-['Founders_Grotesk_Condensed']  font-bold text-back">
-                Behance behance behance
-              </h1>
-            </motion.div>
-            <hr className="h-[.2px] bg-white mt-[5rem]" />
-            <div className="flex flex-col md:flex-row gap-[10rem] w-[100rem] mt-[5rem] ml-[2rem] pb-5">
-              <p className="font-['Neue_Montreal'] text-back text-[1.5rem] ">
-                Latest publications:
-              </p>
-              <div className="flex flex-col md:flex-row gap-2">
-                <Card1 img="./work1.jpeg" text="officevibe ppt template" />
-                <Card1 img="./work2.png" text="Trawa energy pitch deck" />
-                <Card1 img="./work3.png" text="tech from ukraine" />
-              </div>
+        <div className="h-max overflow-hidden  bg-primary z-30 sticky md:top-[-15rem] pb-[5rem]">
+          <hr className="h-[.2px] bg-white mb-[5rem] mt-[5rem]" />
+          <motion.div
+            initial={{ x: "0" }}
+            animate={{ x: "-77%" }}
+            transition={{ duration: 5, repeat: Infinity, ease: "linear" }}
+            className=" w-full bg-primary rounded-2xl"
+          >
+            <h1 className="uppercase text-nowrap bg-primary  w-full leading-[100%] text-[20vw] font-fond  font-bold text-back">
+              Behance behance behance
+            </h1>
+          </motion.div>
+          <hr className="h-[.2px] bg-white mt-[5rem]" />
+          <div className="flex flex-col md:flex-row gap-[10rem] w-[100rem] mt-[5rem] ml-[2rem] pb-5">
+            <p className="font-['Neue_Montreal'] text-back text-[1.5rem] ">
+              Latest publications:
+            </p>
+            <div className="flex flex-col md:flex-row gap-2">
+              <Card1 img="./work1.jpeg" text="officevibe ppt template" />
+              <Card1 img="./work2.png" text="Trawa energy pitch deck" />
+              <Card1 img="./work3.png" text="tech from ukraine" />
             </div>
+          </div>
         </div>
         <Footer />
       </div>

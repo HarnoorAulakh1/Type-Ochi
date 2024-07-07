@@ -228,7 +228,7 @@ export function Card({data: data}: {data: { img: string; name: string; role: str
         </div>
         <div className="flex flex-col absolute left-8 bottom-5">
           {value1.map((item) => (
-            <div className="text-text uppercase leading-none font-bold text-[4rem] font-['Founders_Grotesk_Condensed']">
+            <div className="text-text uppercase leading-none font-bold text-[4rem] font-fond">
               {item}
             </div>
           ))}

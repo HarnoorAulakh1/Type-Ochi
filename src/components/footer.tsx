@@ -5,12 +5,12 @@ function Footer() {
     <div className="flex flex-col bg-back pb-[2rem]  z-50 relative h-full w-full gap-[7rem] pl-8 pr-5">
       <div className="bg-back z-50 relative flex flex-col md:flex-row w-full gap-0  md:gap-[20rem] pb-5 h-full">
         <div>
-          <h1 className="font-['Founders_Grotesk_Condensed'] text-[3rem] w-[5rem] overflow-hidden md:w-max md:text-[6rem] text-text uppercase font-bold">
+          <h1 className="font-fond text-[3rem] w-[5rem] overflow-hidden md:w-max md:text-[6rem] text-text uppercase font-bold">
             eye-opening
           </h1>
         </div>
         <div className="flex flex-col gap-6">
-          <h1 className="font-['Founders_Grotesk_Condensed'] md:text-[6rem] text-[3rem] text-text uppercase font-bold">
+          <h1 className="font-fond md:text-[6rem] text-[3rem] text-text uppercase font-bold">
             presentations
           </h1>
           <div className="flex flex-col gap-5">
