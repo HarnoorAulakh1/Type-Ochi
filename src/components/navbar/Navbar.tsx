@@ -8,19 +8,19 @@ import {
   useMotionValueEvent,
   useScroll,
 } from "framer-motion";
+import {useNotify} from "reactjs-notify-toast";
 
 function Navbar({
   setx,
 }: {
-  setx: React.Dispatch<
-    React.SetStateAction<boolean>
-  >;
+  setx: React.Dispatch<React.SetStateAction<boolean>>;
 }) {
+  const {show}=useNotify();
   const controls = useAnimation();
   const [state, set] = useState(true);
   const [state1, set1] = useState(true);
   const { scrollY } = useScroll();
-  const  navigate  = useNavigate();
+  const navigate = useNavigate();
   useMotionValueEvent(scrollY, "change", (latest) => {
     const y = scrollY.getPrevious();
     if (y !== undefined && latest > y && latest > 100) {
@@ -37,6 +37,7 @@ function Navbar({
   }, []);
   return (
     <motion.div
+    key={state}
       initial={{ y: 0 }}
       animate={state ? { y: 0 } : { y: "-100%" }}
       transition={{ duration: 1, type: "spring" }}
@@ -45,7 +46,9 @@ function Navbar({
       }  flex flex-row w-full md:w-full justify-between items-center overflow-hidden px-10 py-8`}
     >
       <svg
-      onClick={()=>navigate("/")}
+        onClick={() => {
+          show("moved to home")
+        }}
         width="72"
         height="30"
         viewBox="0 0 72 30"

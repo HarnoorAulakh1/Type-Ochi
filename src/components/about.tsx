@@ -246,14 +246,14 @@ function Crousal1({
   data: { img: string; name: string; role: string }[];
 }) {
   return (
-    <div className="bg-primary flex flex-col overflow-hidden items-center gap-5 pb-[8rem] sticky top-[-22rem]">
+    <div className="bg-primary flex flex-col overflow-hidden items-center gap-5 pt-[2rem] md:pt-[5rem] pb-[8rem] sticky top-[-22rem]">
       <motion.div
         initial={{ x: "0" }}
-        animate={{ x: "-150%" }}
+        animate={{ x: "-117.5%" }}
         transition={{ duration: 5, repeat: Infinity, ease: "linear" }}
         className=" w-full bg-primary rounded-2xl "
       >
-        <hr className="w-[250%]" />
+        <hr className="w-[250%] mb-5" />
         <h1 className="uppercase text-nowrap  bg-primary w-full leading-[100%] text-[20vw] font-fond  font-bold text-back">
           {text}
           {text}
@@ -261,7 +261,7 @@ function Crousal1({
         </h1>
         <br />
       </motion.div>
-      <hr className="h-[1px] w-full bg-white mb-[5rem] mt-[2rem]" />
+      <hr className="h-[1px] w-full bg-white mb-[5rem]" />
 
       <Card data={data} />
     </div>

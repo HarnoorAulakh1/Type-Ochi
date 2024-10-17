@@ -57,7 +57,7 @@ export function Crousal({ text }: { text: string }) {
   return (
     <motion.div
       initial={{ x: "0" }}
-      animate={{ x: "-117%" }}
+      animate={{ x: "-94%" }}
       transition={{ duration: 5, repeat: Infinity, ease: "linear" }}
       className=" w-full bg-primary rounded-2xl pt-10"
     >
